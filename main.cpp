@@ -2,9 +2,12 @@
 #include<vector>
 #include<numeric>
 #include<math.h>
+
 using namespace std;
 
 //print function to print the elements in the vector
+
+// https://www.tutorialspoint.com/cpp_standard_library/vector.htm
 void print(vector<int> &v)
 {
     cout<<"Elements in the vector are: ";
@@ -18,7 +21,7 @@ void print(vector<int> &v)
 
 int main()
 {
-    vector<int> myvector;
+/*    vector<int> myvector;
     int num;
     cout<<"Enter 5 elements to store into vector: ";
 
@@ -49,6 +52,10 @@ int main()
     cout<<"After deletion: "<<endl;
     print(myvector);
 
+    *//*
+     * Another native method to find sum and stdev
+     * *//*
+
     // work with vectors
     // https://goo.gl/CmD86x
     vector<int> v = myvector;
@@ -73,4 +80,21 @@ int main()
     cout << mean << endl;
     cout << stdev << endl;
 
+    vector<vector<vector<double>>> l;
+    l.push_back({{23,4}});l.push_back({{25,4}});l.push_back({{26,4}});
+
+    for (auto i: l){
+        for (auto j: i){
+            for (auto k: j)
+                cout << k << ' ';
+        }
+    }*/
+
+    vector<double> probabilities;
+    probabilities = {0.9,0.6,0.3};
+    double ans = *max_element(begin(probabilities), end(probabilities));
+    cout << ans << endl;
+    int final;
+    final = distance(begin(probabilities), max_element(begin(probabilities), end(probabilities)));
+    cout << final << endl;
 }
